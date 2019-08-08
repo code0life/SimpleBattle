@@ -63,10 +63,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Ability.cs" />
+    <Compile Include="Assets\Scripts\AI.cs" />
+    <Compile Include="Assets\Scripts\BattleStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Game.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameUI.cs" />
     <Compile Include="Assets\Scripts\Popup.cs" />
+    <Compile Include="Assets\Scripts\Turn.cs" />
     <Compile Include="Assets\Scripts\Unit.cs" />
+    <Compile Include="Assets\Scripts\UnitStateMachine.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity/SimpleBattle/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

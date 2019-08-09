@@ -33,8 +33,8 @@ public class AI
     //}
     public static void ChoiseEnemy(Unit unit)
     {
-        if (ally.Count == 0 || enemy.Count == 0)
-            return;
+        //if (ally.Count == 0 || enemy.Count == 0)
+            //return;
 
         //foreach (var ally_unit in ally)
         //{

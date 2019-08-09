@@ -32,9 +32,24 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log(BSM.hero_units.Count + " столько героев ");
         Debug.Log(BSM.evil_units.Count + " столько злодеев ");
+        Debug.Log(all_abilites.Count + " столько абилок ");
+
         for (int i = 0; i < BSM.hero_units.Count; ++i)
-            for (int j = 0; j < 2; ++i)
-                BSM.hero_units[i].GetComponent<UnitStateMachine>().unit.abilities[j] = GameObject.Instantiate(all_abilites[j]);
+            for (int j = 0; j < all_abilites.Count; ++j)
+            {
+                //Debug.Log("Unit " + BSM.hero_units[i].GetComponent<UnitStateMachine>().unit.unit_name);
+                BSM.hero_units[i].GetComponent<UnitStateMachine>().unit.abilities.Add(all_abilites[j]);
+                //Debug.Log("Добавляем абилку " + all_abilites[j].name);
+            }
+
+        for (int i = 0; i < BSM.evil_units.Count; ++i)
+            for (int j = 0; j < all_abilites.Count; ++j)
+            {
+                //Debug.Log("Unit " + BSM.evil_units[i].GetComponent<UnitStateMachine>().unit.unit_name);
+                BSM.evil_units[i].GetComponent<UnitStateMachine>().unit.abilities.Add(all_abilites[j]);
+                //Debug.Log("Добавляем абилку " + all_abilites[j].name);
+            }
+
         //BSM.hero_units.get
     }
     void SetAllUnitHP()

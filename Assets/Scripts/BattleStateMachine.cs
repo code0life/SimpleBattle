@@ -44,4 +44,10 @@ public class BattleStateMachine : MonoBehaviour
                 break;
         }
     }
+
+    public void HistoryActions( Turn _turn )
+    {
+        turn_list.Add(_turn);
+    }
+
 }
